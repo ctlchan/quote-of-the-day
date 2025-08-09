@@ -1,5 +1,7 @@
+import Attribution from "@/components/Attribution";
+import Navbar from "@/components/Navbar";
 import Quote from "@/components/Quote";
-import { fetchQuote, QuoteResponseData } from "@/lib/fetchQuote";
+import { QuoteResponseData } from "@/lib/fetchQuote";
 import { useEffect, useState } from "react";
 
 
@@ -65,8 +67,10 @@ export default function Home() {
 
 
   return (
-    <div>
-        <Quote quote={quote.quote} author={quote.author}/>
+    <div className="flex flex-col h-dvh">
+      <Navbar/>
+      <Quote quote={quote.quote} author={quote.author}/>
+      <Attribution/>
     </div>
   );
 }
