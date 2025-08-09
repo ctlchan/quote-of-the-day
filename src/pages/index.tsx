@@ -1,6 +1,7 @@
 import Attribution from "@/components/Attribution";
 import Navbar from "@/components/Navbar";
 import Quote from "@/components/Quote";
+import Timer from "@/components/Timer";
 import { QuoteResponseData } from "@/lib/fetchQuote";
 import { useEffect, useState } from "react";
 
@@ -15,6 +16,8 @@ export default function Home() {
       quote: "",
       author: ""
   });
+
+  const [isNewDay, setIsNewDay] = useState<boolean>(false);
 
   useEffect(() => {
 
@@ -56,7 +59,7 @@ export default function Home() {
         console.log("getting quote from storage...");
       }
 
-  }, [])
+  }, [isNewDay])
 
   useEffect(() => {
     if (quote.quote != "" && quote.author != "") {
@@ -69,6 +72,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-dvh">
       <Navbar/>
+      <Timer setIsNewDay={setIsNewDay}/>
       <Quote quote={quote.quote} author={quote.author}/>
       <Attribution/>
     </div>
