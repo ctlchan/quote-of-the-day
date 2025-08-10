@@ -33,7 +33,7 @@ export default function Timer({ setIsNewDay }: TimerProps ) {
             if (hours == 0 && minutes == 0 && seconds == 0) {
                 console.log("NEW");
                 setIsNewDay(true);
-                setIsNewDay(false);
+                setTimeout(() => setIsNewDay(false), 50); // isolate call so batch state update does not occur
             }
 
             return { hours, minutes, seconds };
@@ -50,10 +50,9 @@ export default function Timer({ setIsNewDay }: TimerProps ) {
 
 
     return (
-        <div className="text-center">
+        <div className="text-center mt-2">
             <p>
             {`Next quote: ${timeRemaining.hours.toString().padStart(2, "0")}:${timeRemaining.minutes.toString().padStart(2, "0")}:${timeRemaining.seconds.toString().padStart(2, "0")}`}
-            
             </p>
         </div>
     )
