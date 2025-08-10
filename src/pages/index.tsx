@@ -23,7 +23,7 @@ export default function Home() {
   useEffect(() => {
 
       async function getQuote() {
-        const url = "http://localhost:3000/api/quote"
+        const url = "/api/quote"
         const response = await fetch(url)
 
         if (!response.ok) {
