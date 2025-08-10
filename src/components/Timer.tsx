@@ -50,7 +50,7 @@ export default function Timer({ setIsNewDay }: TimerProps ) {
 
 
     return (
-        <div className="text-center mt-2">
+        <div className="text-center mt-4 bg-sand dark:bg-charcoal box-border text-xl">
             <p>
             {`Next quote: ${timeRemaining.hours.toString().padStart(2, "0")}:${timeRemaining.minutes.toString().padStart(2, "0")}:${timeRemaining.seconds.toString().padStart(2, "0")}`}
             </p>

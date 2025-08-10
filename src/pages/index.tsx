@@ -18,6 +18,7 @@ export default function Home() {
   });
 
   const [isNewDay, setIsNewDay] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
 
@@ -46,6 +47,11 @@ export default function Home() {
         });
       }
 
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setIsDarkMode(true);
+      }
+
+
       const accessDay: string | null = localStorage.getItem("accessDay");
       const now = dateToSimpleString(new Date());
 
@@ -68,10 +74,14 @@ export default function Home() {
     }
   }, [quote])
 
+  // useEffect(() => {
+
+  // }, [isDarkMode])
+
 
   return (
-    <div className="flex flex-col h-dvh">
-      <Navbar/>
+    <div className={`flex flex-col h-dvh bg-sand dark:bg-charcoal ${isDarkMode ? "dark" : ""} dark:text-white text-black`}>
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
       <Timer setIsNewDay={setIsNewDay}/>
       <Quote quote={quote.quote} author={quote.author}/>
       <Attribution/>
