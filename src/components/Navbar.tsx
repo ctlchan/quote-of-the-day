@@ -5,7 +5,7 @@ import quote from '@/assets/quote.png'
 
 export default function Navbar({isDarkMode, setIsDarkMode}: DarkModeToggleProps) {
     return (
-        <div className="flex justify-between items-center top-0 p-2.5 bg-sage dark:bg-mist">
+        <div className="flex justify-between items-center top-0 p-2.5 bg-secondary dark:bg-secondaryDark">
             <Image 
                 src={quote} 
                 alt="Quote Icon"

@@ -28,8 +28,8 @@ body {
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-sage: #D8E2DC;
-  --color-sand: #f5eedc;
-  --color-charcoal: #2e2e2e;
-  --color-mist: #a3bfd9;
+  --color-main: #D8E2DC;
+  --color-secondary: #f5eedc;
+  --color-mainDark: #2e2e2e;
+  --color-secondaryDark: #a3bfd9;
 }

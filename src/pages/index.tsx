@@ -80,7 +80,7 @@ export default function Home() {
 
 
   return (
-    <div className={`flex flex-col h-dvh bg-sand dark:bg-charcoal ${isDarkMode ? "dark" : ""} dark:text-white text-black`}>
+    <div className={`flex flex-col h-dvh bg-main dark:bg-mainDark ${isDarkMode ? "dark" : ""} dark:text-white text-black`}>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
       <Timer setIsNewDay={setIsNewDay}/>
       <Quote quote={quote.quote} author={quote.author}/>

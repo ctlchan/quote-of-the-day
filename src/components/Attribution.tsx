@@ -1,6 +1,6 @@
 export default function Attribution() {
     return (
-        <div className="flex justify-center bottom-0 bg-sand dark:bg-charcoal">
+        <div className="flex justify-center bottom-0 bg-main dark:bg-mainDark">
             <p>
                 Inspirational quotes provided by&nbsp;
                     <a href="htpps://zenquotes.io/" target="_blank" className="text-blue-300 hover:shadow">ZenQuotes API</a>. 

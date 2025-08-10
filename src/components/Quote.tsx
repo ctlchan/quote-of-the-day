@@ -5,7 +5,7 @@ type QuoteProps = {
 
 export default function Quote({ quote, author }: QuoteProps) {
     return (
-        <div className="flex justify-center items-center flex-col h-screen font-serif bg-sand dark:bg-charcoal">
+        <div className="flex justify-center items-center flex-col h-screen font-serif bg-main dark:bg-mainDark">
             <div className="w-2/3 m-auto">
                 <blockquote>
                     <p className="font-bold text-center text-5xl">
